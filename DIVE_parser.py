@@ -27,12 +27,12 @@ print("找到連結數量：", len(titles))
 
 
 # =========================
-# 抓前 2 個連結
+# 抓取潛點資料
 # =========================
 
-for n in titles[:2]:
+for n in titles:
     title_text = n.get_text(" ",strip=True)
-    print(f'新聞標題: {title_text}')
+    print(f'潛點: {title_text}')
     content = n.find_next("p")
     delay = random.uniform(2,3.5)      #亂數產生 2~3.5秒  
     time.sleep(delay)                  #讓電腦暫時休眠 指定的秒數後再開始工作 
@@ -40,4 +40,4 @@ for n in titles[:2]:
             " ",
             strip=True
         )
-    print(f'新聞內容: {content_text}')
+    print(f'潛點內容: {content_text}')
